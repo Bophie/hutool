@@ -411,7 +411,7 @@ public class Setting extends AbsSetting implements Map<String, String> {
 	}
 
 	/**
-	 * 设置文件的URL
+	 * 设置加载文件路径
 	 * @param url 文件路径
 	 */
 	public void setSettingUrl(URL url) {
