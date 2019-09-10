@@ -15,6 +15,7 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IORuntimeException;
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.io.resource.UrlResource;
+import cn.hutool.core.text.StrSpliter;
 import cn.hutool.core.util.CharUtil;
 import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.ReUtil;
@@ -124,7 +125,7 @@ public class SettingLoader {
 					continue;
 				}
 
-				final String[] keyValue = StrUtil.split(line, assignFlag, 2);
+				final String[] keyValue = StrSpliter.splitToArray(line, assignFlag, 2, false, false);
 				// 跳过不符合键值规范的行
 				if (keyValue.length < 2) {
 					continue;
